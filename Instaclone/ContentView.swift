@@ -9,16 +9,46 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-
-            Text("Hello, world!")
-            Text("Hello, world!")
+        navigationBar
+    }
+        
+        var navigationBar: some View {
+            HStack {
+                Image("instagram")
+                    .resizable()
+                    .frame(width:  165, height: 65)
+                
+                Spacer()
+                
+                HStack(spacing: 26) {
+                    
+                    
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                        Image(systemName: "plus.app")
+                        
+                    }
+                    
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                        Image(systemName: "heart")
+                        
+                    }
+                    
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                        Image(systemName: "paperplane")
+                        
+                    }
+                }
+                .foregroundColor(.black)
+            }
+            .padding(.horizontal, 20)
         }
-        .padding()
+    }
+
+
+
+struct ContentView_Previews:  PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .previewDevice("iPhone 13")
     }
 }
-
-#Preview {
-    ContentView()
-}
-

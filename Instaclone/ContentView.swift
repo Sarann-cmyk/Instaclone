@@ -21,6 +21,7 @@ struct ContentView: View {
             Image("instagram")
                 .resizable()
                 .frame(width:  165, height: 65)
+                .offset(CGSize(width: -20.0, height: 0.0))
             
             Spacer()
             
@@ -90,7 +91,8 @@ struct StoryCollection: Identifiable {
                 .scaledToFill()
                 .cornerRadius(100)
         }
-            .frame(width: 66, height: 66)
+            .frame(width: 80, height: 80)
+            .offset(CGSize(width: 10.0, height: 0.0))
     }
 }
     
